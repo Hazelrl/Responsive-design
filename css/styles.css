@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body, #portfolio, ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+
+body {
+    font-family: "Roboto", Arial, Verdana;
+    font-weight: 400;
+    letter-spacing: .05em;
+    text-align: center;
+    background-color: #F2F4F4;
+}
+
+
+p, h1, h2, .menu-heading, .footer-title {
+    color: darkslategrey;
+    text-align: center;
+    line-height: 1.5;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    /* border: 2px dashed red; */
+}
+
+p {
+    font-size: 0.9em;
+}
+
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1em;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.2em;
+    font-weight: 500;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin-bottom: -5px;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    color: darkslategrey;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+}
+
+#portfolio {
+    padding: 5px;
+    width: 100%;
+    max-width: 1024px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.profile-picture {
+    width: 70%;
+}
+
+.menu-heading {
+    font-size: 1.6em;
+    font-weight: 900;
+    padding: 0.5em 1.5em 1em;
+}
+
+.menu-item {
+    font-size: 0.85em;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0.8em 1.5em;
+    background-color: #fff;
+    border-radius: 0.35em;
+    display: block;
+    margin: 3px 12px;
+}
+
+.col {
+    min-height: 250px;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 5px;
+    background-color: #fff;
+}
+
+.contact {
+    margin-bottom: 40px;
+}
+
+.back-to-top {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 0.8em;
+}
+
+.footer-title {
+    font-weight: bolder;
+    font-size: 0.9em;
+}
+
+
+
+
+
