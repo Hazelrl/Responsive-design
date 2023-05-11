@@ -2,8 +2,9 @@
     box-sizing: border-box;
 }
 
-body, #portfolio, ul {
+body, #portfolio, ul, footer {
     display: flex;
+    justify-content: center;
     flex-direction: column;
 }
 
@@ -70,14 +71,13 @@ a {
     text-decoration: none;
 }
 
-footer {
-    text-align: center;
+main {
+    padding-bottom: 3em;
 }
 
 #portfolio {
     padding: 5px;
     width: 100%;
-    max-width: 1024px;
     background-color: #fff;
     text-align: center;
 }
@@ -111,8 +111,15 @@ footer {
     background-color: #fff;
 }
 
-.contact {
-    margin-bottom: 40px;
+#contact {
+    margin-top: 3em;
+    margin-bottom: 1.5em;
+}
+
+.line-divider {
+    border-top: 0.75px solid rgb(214, 211, 211);
+    padding-top: 0.5em;
+    margin-left: 15px;
 }
 
 .back-to-top {
