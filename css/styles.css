@@ -2,30 +2,15 @@
     box-sizing: border-box;
 }
 
-body, section, #articles, ul, .footer-nav {
+body, section, #articles, ul, .footer-nav, .skills-list {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: auto;
-}
-
-.footer-nav {
-    display: flex;
-    justify-content: right;
-    flex-direction: row;
-    align-items: right;
-    justify-content: space-between;
-}
-
 
 body {
-    font-family: "Roboto", Arial, Verdana;
+    font-family: "Roboto", "Rubik", Arial, Verdana;
     font-weight: 400;
     letter-spacing: .05em;
     text-align: center;
@@ -83,8 +68,30 @@ a {
     text-decoration: none;
 }
 
+/* Links change when hovered over */
+a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    color: black;
+}
+
 article {
     margin-bottom: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    align-items: right;
+    justify-content: space-between;
 }
 
 #portfolio {
@@ -146,6 +153,30 @@ footer li {
     align-self: flex-start;
 }
 
+#skills {
+    background-color: rgb(245, 229, 245);
+    padding-bottom: 60px;
+}
+
+.skills-list {
+    flex-wrap: wrap;
+}
+
+.skills-list li {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1em;
+    padding: 0.8em 1.5em;
+    color: darkgreen;
+    background-color: #8dda92;
+    border-radius: 0.35em;
+    margin: 3px 12px;
+}
+
+/* Bolder style for top skills, to make them stand out */
+.top-skill {
+    font-weight: bolder;
+}
+
 /* Hides additional footer menu items when screen size is less than 768px*/
 
 .full {
@@ -179,7 +210,7 @@ footer li {
         flex-basis: 50%;
     }
 
-    .intro p, #contact {
+    .intro p, #contact p {
         font-size: 1.2rem;
     }
 
@@ -198,6 +229,10 @@ footer li {
 
     .top {
         display: none;
+    }
+
+    .skills-list {
+        flex-direction: row;
     }
 
 }
