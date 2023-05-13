@@ -2,16 +2,24 @@
     box-sizing: border-box;
 }
 
-body, #portfolio, ul, footer {
+body, section, #articles, ul, .footer-nav {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-.footer-list {
+footer {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: right;
     flex-direction: row;
-    align-items: baseline;
+    align-items: right;
     justify-content: space-between;
 }
 
@@ -25,7 +33,7 @@ body {
 }
 
 
-p, h1, h2, .menu-heading, .footer-title {
+p, h1, h2, h3, footer {
     color: darkslategrey;
     text-align: center;
     line-height: 1.5;
@@ -33,15 +41,18 @@ p, h1, h2, .menu-heading, .footer-title {
     padding-right: 15px;
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
-    /* border: 2px dashed red; */
 }
 
 p {
     font-size: 0.9em;
 }
 
-
 h1 {
+    font-size: 1.6em;
+    font-weight: 900;
+}
+
+h2 {
     text-transform: uppercase;
     font-weight: 800;
     font-size: 1em;
@@ -49,7 +60,7 @@ h1 {
     padding-bottom: 10px;
 }
 
-h2 {
+h3 {
     font-size: 1.2em;
     font-weight: 500;
     padding-top: 10px;
@@ -59,6 +70,7 @@ h2 {
 
 img {
     max-width: 100%;
+    margin: 0 auto;
 }
 
 ul {
@@ -71,11 +83,15 @@ a {
     text-decoration: none;
 }
 
-main {
-    padding-bottom: 3em;
+article {
+    margin-bottom: 20px;
 }
 
 #portfolio {
+    background-color: white;
+}
+
+#articles {
     padding: 5px;
     width: 100%;
     background-color: #fff;
@@ -84,12 +100,6 @@ main {
 
 .profile-picture {
     width: 70%;
-}
-
-.menu-heading {
-    font-size: 1.6em;
-    font-weight: 900;
-    padding: 0.5em 1.5em 1em;
 }
 
 .menu-item {
@@ -112,27 +122,111 @@ main {
 }
 
 #contact {
-    margin-top: 3em;
-    margin-bottom: 1.5em;
+    margin: 1em;
+    padding-bottom: 2em;
+}
+ 
+footer {
+    border-top: 1px solid lightgray;
 }
 
-.line-divider {
-    border-top: 0.75px solid rgb(214, 211, 211);
-    padding-top: 0.5em;
-    margin-left: 15px;
-}
-
-.back-to-top {
+footer li {
+    display: inline-flex;
     text-transform: uppercase;
     font-weight: bolder;
     font-size: 0.8em;
+    align-self: flex-end;
+    padding: 0px 15px 0px;
 }
 
 .footer-title {
+    display: inline-flex;
     font-weight: bolder;
     font-size: 0.9em;
+    align-self: flex-start;
 }
 
+/* Hides additional footer menu items when screen size is less than 768px*/
+
+.full {
+    display: none;
+}
+
+/* Media queries to optimise display on different devices*/
+
+
+@media (min-width: 768px) {
+    body {
+        margin: auto 0.5rem;
+    }
+    
+    ul {
+        flex-direction: row;
+    }
+
+    .intro {
+        flex-direction: row-reverse;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    #articles {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    article {
+        flex-basis: 50%;
+    }
+
+    .intro p, #contact {
+        font-size: 1.2rem;
+    }
+
+    .intro p {
+        text-align: left;
+    }
+
+    #contact p {
+        max-width: 80%;
+        margin: 0.5rem auto;
+    }
+
+    .full {
+        display: inline-flex;
+    }
+
+    .top {
+        display: none;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    #contact p {
+        max-width: 60%;
+    }
+
+    article {
+        flex-basis: 33.33%;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header h1 {
+        display: inline-flex;
+    }
+
+    .main-nav {
+        display: inline-flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+}
 
 
 
