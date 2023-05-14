@@ -25,7 +25,6 @@ footer {
 .footer-nav {
     justify-content: right;
     flex-direction: row;
-    align-items: right;
     justify-content: space-between;
 }
 
