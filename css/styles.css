@@ -2,13 +2,39 @@
     box-sizing: border-box;
 }
 
-body, section, #articles, ul, .footer-nav, .skills-list {
+/* Flex containers */
+body, section, #articles, ul, footer, .footer-nav, .skills-list {
     display: flex;
+}
+
+footer li, .footer-title {
+    display: inline-flex;
+}
+
+body, section, #articles, ul, .footer-nav, .skills-list {
     justify-content: center;
     flex-direction: column;
 }
 
+footer {
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
 
+.footer-nav {
+    justify-content: right;
+    flex-direction: row;
+    align-items: right;
+    justify-content: space-between;
+}
+
+.skills-list {
+    flex-wrap: wrap;
+}
+
+
+/* Body styling */
 body {
     font-family: "Roboto", "Rubik", Arial, Verdana;
     font-weight: 400;
@@ -17,24 +43,24 @@ body {
     background-color: #F2F4F4;
 }
 
-
+/* Element styling */
 p, h1, h2, h3, footer {
     color: darkslategrey;
     text-align: center;
     line-height: 1.5;
     padding-left: 15px;
     padding-right: 15px;
-    font-weight: 400;
     font-family: 'Roboto', sans-serif;
 }
 
 p {
+    font-weight: 400;
     font-size: 0.9em;
 }
 
 h1 {
-    font-size: 1.6em;
     font-weight: 900;
+    font-size: 1.6em;
 }
 
 h2 {
@@ -63,6 +89,25 @@ ul {
     padding-left: 0;
 }
 
+article {
+    margin-bottom: 20px;
+}
+
+footer {
+    border-top: 1px solid lightgray;
+}
+
+footer li {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 0.8em;
+    align-self: flex-end;
+    padding: 0px 15px 0px;
+}
+
+
+/* Link styling */
+
 a {
     color: darkslategrey;
     text-decoration: none;
@@ -75,35 +120,7 @@ a:hover {
     color: black;
 }
 
-article {
-    margin-bottom: 20px;
-}
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: auto;
-}
-
-.footer-nav {
-    display: flex;
-    justify-content: right;
-    flex-direction: row;
-    align-items: right;
-    justify-content: space-between;
-}
-
-#portfolio {
-    background-color: white;
-}
-
-#articles {
-    padding: 5px;
-    width: 100%;
-    background-color: #fff;
-    text-align: center;
-}
+/* Class styling */
 
 .profile-picture {
     width: 70%;
@@ -128,38 +145,10 @@ footer {
     background-color: #fff;
 }
 
-#contact {
-    margin: 1em;
-    padding-bottom: 2em;
-}
- 
-footer {
-    border-top: 1px solid lightgray;
-}
-
-footer li {
-    display: inline-flex;
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 0.8em;
-    align-self: flex-end;
-    padding: 0px 15px 0px;
-}
-
 .footer-title {
-    display: inline-flex;
     font-weight: bolder;
     font-size: 0.9em;
     align-self: flex-start;
-}
-
-#skills {
-    background-color: rgb(245, 229, 245);
-    padding-bottom: 60px;
-}
-
-.skills-list {
-    flex-wrap: wrap;
 }
 
 .skills-list li {
@@ -183,10 +172,35 @@ footer li {
     display: none;
 }
 
+/* ID styling */
+
+#skills {
+    background-color: rgb(245, 229, 245);
+    padding-bottom: 60px;
+}
+
+#contact {
+    margin: 1em;
+    padding-bottom: 2em;
+}
+
+#portfolio {
+    background-color: white;
+}
+
+#articles {
+    padding: 5px;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+}
+ 
+
+
 /* Media queries to optimise display on different devices*/
 
-
 @media (min-width: 768px) {
+
     body {
         margin: auto 0.5rem;
     }
@@ -195,32 +209,22 @@ footer li {
         flex-direction: row;
     }
 
+    article {
+        flex-basis: 50%;
+    }
+
     .intro {
         flex-direction: row-reverse;
         margin-top: 40px;
         margin-bottom: 40px;
     }
-
-    #articles {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    article {
-        flex-basis: 50%;
-    }
-
+    
     .intro p, #contact p {
         font-size: 1.2rem;
     }
 
     .intro p {
         text-align: left;
-    }
-
-    #contact p {
-        max-width: 80%;
-        margin: 0.5rem auto;
     }
 
     .full {
@@ -235,13 +239,20 @@ footer li {
         flex-direction: row;
     }
 
+    #articles {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #contact p {
+        max-width: 80%;
+        margin: 0.5rem auto;
+    }
+
 }
 
 @media (min-width: 1024px) {
-    #contact p {
-        max-width: 60%;
-    }
-
+    
     article {
         flex-basis: 33.33%;
     }
@@ -261,6 +272,9 @@ footer li {
         flex-direction: row;
     }
 
+    #contact p {
+        max-width: 60%;
+    }
 }
 
 
